@@ -24,3 +24,54 @@ The pipeline:
 
 ## 📂 Project Structure
 
+---
+
+## ⚙️ ETL Process
+
+### 1. Extract
+- Scrapes the top 10 banks
+- Cleans market capitalization values (USD)
+
+### 2. Transform
+- Reads exchange rates from a CSV file
+- Converts USD values into GBP, EUR, and INR
+
+### 3. Load
+- Saves output to:
+  - CSV file (Largest_banks_data.csv)
+  - SQLite database (Banks.db)
+
+### 4. Query
+Example SQL query:
+
+SELECT * FROM Largest_banks
+ORDER BY MC_USD_Billion DESC
+LIMIT 5;
+
+---
+
+## ▶️ How to Run
+
+pip install pandas requests beautifulsoup4
+python banks_project.py
+
+---
+
+## ✅ Outputs
+- Largest_banks_data.csv
+- Banks.db
+- code_log.txt
+
+---
+
+## 🧠 Key Learnings
+- ETL pipelines
+- Web scraping
+- Currency transformation
+- SQLite databases
+- Logging
+
+---
+
+## 👤 Author
+Ken Njogu
